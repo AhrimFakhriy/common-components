@@ -1,11 +1,11 @@
 @props(['title' => null])
 
-<fieldset {{ $attributes }}>
+<fieldset>
     @isset ($title)
-        <legend class="mb-12 text-lg leading-snug text-slate-800 font-medium">{{ $title }}</legend>
+        <legend class="leading-snug font-medium">{{ $title }}</legend>
     @endisset
 
-    <div {{ $slot->attributes->merge(['class' => 'space-y-6']) }}>
+    <div {{ $attributes->merge(['class' => 'mt-4 space-y-2']) }}>
         {{ $slot }}
     </div>
 </fieldset>

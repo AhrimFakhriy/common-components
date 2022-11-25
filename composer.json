@@ -1,6 +1,6 @@
 {
     "name": "ahrimfakhriy/common-components",
-    "description": "This is my package common-components",
+    "description": "Set of common blade components that are used in various Mysoftcare products.",
     "keywords": [
         "ahrimfakhriy",
         "laravel",
@@ -31,8 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AhrimFakhriy\\CommonComponents\\": "src",
-            "AhrimFakhriy\\CommonComponents\\Database\\Factories\\": "database/factories"
+            "AhrimFakhriy\\CommonComponents\\": "src"
         }
     },
     "autoload-dev": {

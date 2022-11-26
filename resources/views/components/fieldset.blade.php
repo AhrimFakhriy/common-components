@@ -2,10 +2,10 @@
 
 <fieldset>
     @isset ($title)
-        <legend class="text-lg leading-snug font-medium">{{ $title }}</legend>
+        <legend class="text-lg leading-snug font-medium mb-4">{{ $title }}</legend>
     @endisset
 
-    <div {{ $attributes->merge(['class' => 'mt-4 space-y-2']) }}>
+    <div {{ $attributes->merge(['class' => 'space-y-2']) }}>
         {{ $slot }}
     </div>
 </fieldset>

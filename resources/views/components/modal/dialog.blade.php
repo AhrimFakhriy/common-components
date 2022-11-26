@@ -11,8 +11,8 @@
             </div>
         @endisset
 
-        <div  {{ $slot->attributes->merge(['class' => 'px-6 py-4']) }}>
-            {{ $slot }}
+        <div  {{ $content->attributes->merge(['class' => 'px-6 py-4']) }}>
+            {{ $content }}
         </div>
 
         @isset($footer)

@@ -3,8 +3,6 @@
     'footer' => null,
 ])
 
-@php $content ??= $slot; @endphp
-
 <x-cc::modal {{ $attributes->except(['class']) }}>
     <div {{ $attributes->only('class')->merge(['class' => 'flex flex-col divide-y']) }}>
         @isset($header)
@@ -13,8 +11,8 @@
             </div>
         @endisset
 
-        <div  {{ $content->attributes->merge(['class' => 'px-6 py-4']) }}>
-            {{ $content }}
+        <div  {{ $slot->attributes->merge(['class' => 'px-6 py-4']) }}>
+            {{ $slot }}
         </div>
 
         @isset($footer)

@@ -1,6 +1,6 @@
 @props([
-    'dismissible' => false,
     'maxWidth' => '2xl',
+    'dismissible',
     'id' => null,
 ])
 
@@ -24,7 +24,7 @@
     x-modelable="show"
     x-data="{
         show: @if ($attributes->thatStartWith('wire:model')->first()) @entangle($attributes->wire('model')) @else false @endif,
-        dismissible: @js($dismissible),
+        dismissible: @js($dismissible ?? false),
         focusables() {
             // All focusable element types...
             let selector = 'a, button, input:not([type=\'hidden\']), textarea, select, details, [tabindex]:not([tabindex=\'-1\'])'

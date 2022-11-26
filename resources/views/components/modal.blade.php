@@ -1,5 +1,5 @@
 @props([
-    'dismissible' => true,
+    'dismissible' => false,
     'maxWidth' => '2xl',
     'id' => null,
 ])

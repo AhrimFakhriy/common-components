@@ -1,7 +1,7 @@
 @props([
     'maxWidth' => '2xl',
     'value' => null,
-    'id' = null,
+    'id' => null,
 ])
 
 @php

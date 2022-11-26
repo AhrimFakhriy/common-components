@@ -19,6 +19,7 @@
 @endphp
 
 <div
+    {{ $attributes->only('x-model') }}
     x-modelable="show"
     x-data="{
         show: @if ($attributes->thatStartWith('wire:model')->first()) @entangle($attributes->wire('model')) @else false @endif,

@@ -1,6 +1,5 @@
 @props([
     'maxWidth' => '2xl',
-    'value' => null,
     'id' => null,
 ])
 
@@ -22,7 +21,7 @@
 <div
     x-modelable="show"
     x-data="{
-        show: @if ($attributes->thatStartWith('wire:model')->first()) @entangle($attributes->wire('model')) @else @js($value) @endif,
+        show: @if ($attributes->thatStartWith('wire:model')->first()) @entangle($attributes->wire('model')) @else false @endif,
         focusables() {
             // All focusable element types...
             let selector = 'a, button, input:not([type=\'hidden\']), textarea, select, details, [tabindex]:not([tabindex=\'-1\'])'

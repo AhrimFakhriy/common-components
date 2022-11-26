@@ -3,6 +3,8 @@
     'footer' => null,
 ])
 
+@php $content ??= $slot; @endphp
+
 <x-cc::modal {{ $attributes->except(['class']) }}>
     <div {{ $attributes->only('class')->merge(['class' => 'flex flex-col divide-y']) }}>
         @isset($header)
